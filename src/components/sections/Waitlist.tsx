@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
 import { useRef, useState } from 'react';
 import { Mail, Check, AlertCircle } from 'lucide-react';
-import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
+// import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const Waitlist = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [email, setEmail] = useState('');

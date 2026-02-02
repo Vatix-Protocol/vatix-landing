@@ -4,15 +4,15 @@ import { useRef } from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Team = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const futureRoles = [
-    'Senior Soroban developer',
-    'Full-stack engineer',
-    'Security specialist',
-    'Community manager'
-  ];
+  // const futureRoles = [
+  //   'Senior Soroban developer',
+  //   'Full-stack engineer',
+  //   'Security specialist',
+  //   'Community manager'
+  // ];
 
   return (
     <section ref={ref} className="py-20 px-4">

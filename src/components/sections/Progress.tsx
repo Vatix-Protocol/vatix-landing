@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
 
 const Progress = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const phases = [

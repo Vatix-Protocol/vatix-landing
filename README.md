@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# Vatix Protocol Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pre-launch landing page for Vatix Protocol - the first fully open-source prediction market platform built on Stellar blockchain.
 
-Currently, two official plugins are available:
+## 🚀 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[vatix-landing.vercel.app](https://vatix-landing.vercel.app)
 
-## React Compiler
+## 📋 About
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+This is the official landing page for Vatix Protocol, featuring:
 
-## Expanding the ESLint configuration
+- Project overview and value proposition
+- Development roadmap and progress tracking
+- Email waitlist for early access
+- Links to open-source repositories
+- Information about the Stellar blockchain integration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Email Collection:** Mailchimp
+- **Deployment:** Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🏃‍♂️ Running Locally
+```bash
+# Clone the repository
+git clone https://github.com/vatix-protocol/vatix-landing.git
+cd vatix-landing
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+pnpm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your Mailchimp credentials
+
+# Start development server
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` to see the site.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Build
+```bash
+# Build for production
+pnpm build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+pnpm preview
 ```
+
+## 🔧 Environment Variables
+
+Create a `.env` file with:
+```env
+VITE_MAILCHIMP_SERVER_PREFIX=your-server-prefix
+VITE_MAILCHIMP_AUDIENCE_ID=your-audience-id
+VITE_MAILCHIMP_U=your-u-parameter
+```
+
+## 📝 Project Structure
+```
+vatix-landing/
+├── src/
+│   ├── components/
+│   │   ├── sections/      # Page sections (Hero, Problem, etc.)
+│   │   └── ui/            # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── assets/            # Images and static assets
+│   ├── App.tsx            # Main app component
+│   └── index.css          # Global styles
+├── public/                # Static files
+└── README.md
+```
+
+## 🤝 Contributing
+
+This is the marketing site for Vatix Protocol. For contributing to the core protocol:
+
+- [Smart Contracts](https://github.com/vatix-protocol/vatix-contract)
+- [Backend](https://github.com/vatix-protocol/vatix-backend)
+- [Documentation](https://github.com/vatix-protocol/vatix-docs)
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details
+
+## 🔗 Links
+
+- [Main Website] *(coming soon)*
+- [GitHub Organization](https://github.com/vatix-protocol)
+- [Documentation](https://github.com/vatix-protocol/vatix-docs)

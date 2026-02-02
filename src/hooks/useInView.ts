@@ -1,4 +1,5 @@
-import { useEffect, useState, RefObject } from "react";
+import { useEffect, useState } from "react";
+import type { RefObject } from "react";
 
 interface UseInViewOptions {
   once?: boolean;
@@ -6,7 +7,7 @@ interface UseInViewOptions {
 }
 
 export const useInView = (
-  ref: RefObject<Element>,
+  ref: RefObject<Element | null>,
   options: UseInViewOptions = {},
 ): boolean => {
   const [isInView, setIsInView] = useState(false);

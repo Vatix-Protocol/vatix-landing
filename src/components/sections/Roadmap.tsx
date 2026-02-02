@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from '../../hooks/useInView';import { useRef } from "react";
 
 const Roadmap = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const quarters = [

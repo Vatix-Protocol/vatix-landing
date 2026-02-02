@@ -1,5 +1,5 @@
-import { Github } from 'lucide-react';
-import { FaDiscord, FaTwitter } from 'react-icons/fa';
+// import { Github } from 'lucide-react';
+// import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

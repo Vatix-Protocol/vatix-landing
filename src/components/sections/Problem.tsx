@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { X, Check } from "lucide-react";
 
 const Problem = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const problems = [

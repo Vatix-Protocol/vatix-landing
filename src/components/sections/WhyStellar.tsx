@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Zap, DollarSign, Building2, Wrench, Globe, Unlock } from "lucide-react";
 
 const WhyStellar = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const benefits = [

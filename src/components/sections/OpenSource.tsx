@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Github, Star, GitFork, GitCommit, AlertCircle } from 'lucide-react';
 
 const OpenSource = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   // State for GitHub stats (you'll replace with actual API calls)
