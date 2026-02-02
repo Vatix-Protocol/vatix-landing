@@ -11,11 +11,26 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
+        {/* Logo */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-8"
+        >
+          <img
+            src="/logo_zoom.png"
+            alt="Vatix Protocol"
+            className="h-16 md:h-20"
+            style={{ filter: "drop-shadow(0 0 20px rgba(0, 212, 255, 0.3))" }}
+          />
+        </motion.div> */}
+
         {/* Trust badges */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-400"
         >
           <div className="flex items-center gap-2 px-4 py-2 bg-primary-800/50 rounded-full border border-primary-700">
@@ -48,8 +63,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
         >
-          The first fully open-source prediction market on Stellar blockchain.
-          Trade on real-world events with complete transparency and community governance.
+          The first fully open-source prediction market on Stellar blockchain. Trade on
+          real-world events with complete transparency and community governance.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -66,7 +81,7 @@ const Hero = () => {
             Join Waitlist
             <ArrowRight className="w-5 h-5" />
           </a>
-          
+
           <a
             href="https://github.com/vatix-protocol"
             target="_blank"

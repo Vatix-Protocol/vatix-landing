@@ -33,18 +33,20 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo and description */}
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-stellar-purple rounded-lg flex items-center justify-center font-bold text-xl">
-                V
-              </div>
-              <span className="text-xl font-bold">Vatix Protocol</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo_zoom.png"
+                alt="Vatix Protocol"
+                className="h-10"
+                // style={{ filter: "brightness(0) invert(1)" }}
+              />
             </div>
             <p className="text-gray-400 text-sm max-w-xs mb-6">
               The first open-source prediction market on Stellar
             </p>
-            
-            {/* Social icons */}
-            <div className="flex gap-3">
+
+            {/*TODO: Social icons */}
+            {/* <div className="flex gap-3">
               <a
                 href="https://github.com/vatix-protocol"
                 target="_blank"
@@ -54,7 +56,7 @@ const Footer = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
-              
+
               <a
                 href="https://twitter.com/[YOUR_TWITTER]"
                 target="_blank"
@@ -64,7 +66,7 @@ const Footer = () => {
               >
                 <FaTwitter className="w-5 h-5" />
               </a>
-               
+
               <a
                 href="https://discord.gg/[YOUR_DISCORD]"
                 target="_blank"
@@ -74,7 +76,7 @@ const Footer = () => {
               >
                 <FaDiscord className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Product */}
@@ -83,11 +85,10 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
-                  
                   <a
                     href={link.url}
-                    target={link.url.startsWith('http') ? '_blank' : undefined}
-                    rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={link.url.startsWith("http") ? "_blank" : undefined}
+                    rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="text-gray-400 hover:text-accent-cyan transition-colors text-sm"
                   >
                     {link.name}
@@ -103,7 +104,6 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.community.map((link, index) => (
                 <li key={index}>
-                  
                   <a
                     href={link.url}
                     target="_blank"
@@ -123,7 +123,6 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  
                   <a
                     href={link.url}
                     target="_blank"
@@ -144,15 +143,14 @@ const Footer = () => {
             <p className="text-gray-500 text-sm text-center md:text-left">
               © {currentYear} Vatix Protocol. Built on Stellar. Open Source (MIT).
             </p>
-            
+
             <div className="flex flex-wrap gap-4 justify-center">
               {footerLinks.legal.map((link, index) => (
-                
                 <a
                   key={index}
                   href={link.url}
-                  target={link.url.startsWith('http') ? '_blank' : undefined}
-                  rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  target={link.url.startsWith("http") ? "_blank" : undefined}
+                  rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-gray-500 hover:text-gray-400 transition-colors text-sm"
                 >
                   {link.name}
@@ -163,8 +161,8 @@ const Footer = () => {
 
           {/* Disclaimer */}
           <p className="text-gray-600 text-xs text-center mt-6 max-w-3xl mx-auto">
-            Disclaimer: Vatix Protocol is in active development. Prediction markets may not be
-            available in all jurisdictions. Please check local regulations.
+            Disclaimer: Vatix Protocol is in active development. Prediction markets may
+            not be available in all jurisdictions. Please check local regulations.
           </p>
         </div>
       </div>
