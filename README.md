@@ -81,6 +81,7 @@ vatix-landing/
 
 This is the marketing site for Vatix Protocol. For contributing to the core protocol:
 
+- [Design & UI Guidelines](DESIGN_GUIDELINES.md) - **Start here for UI contributions**
 - [Smart Contracts](https://github.com/vatix-protocol/vatix-contract)
 - [Backend](https://github.com/vatix-protocol/vatix-backend)
 - [Documentation](https://github.com/vatix-protocol/vatix-docs)
